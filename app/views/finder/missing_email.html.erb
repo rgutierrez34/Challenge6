@@ -1,0 +1,4 @@
+<p><%= link_to 'New Customer', 'customers/new' %> - <%= link_to 'All Customers', 'finder' %> - <%= link_to 'Alphabetized', 'alphabetized' %></p>
+<% @customers.each do |customer| %>
+  <%= render customer %>
+<% end %>
