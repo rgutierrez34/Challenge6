@@ -8,12 +8,24 @@
   <span><%= image_tag customer.image %></span>
   
   <p> 
-  	<b>Phone: </b><%= customer.phone_number %>
+    <b>Phone: </b><%= customer.phone_number %>
   </p>
 
+  <% if customer.email_address.present? %>
+    <p>
+      <b>Email: </b><%= customer.email_address %>
+    </p>
+  <% end %>
+  
+  <% if customer.province_id.present? %>
   <p>
-  	<b>Email: </b><%= customer.email_address %>
+    <b>Province: </b><%= customer.province.name %>
   </p>
+  <% else %>
+  <p>
+    <b>Province: </b>None
+  </p>
+  <% end %>
 
   <p>
     <b>Notes: </b><%= customer.notes %>

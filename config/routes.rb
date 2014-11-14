@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  resources :provinces
+
   resources :customers
 
+
+
+  get 'finder' => 'finder#index'
+  get 'missing_email' => 'finder#missing_email'
+  get 'alphabetized' => 'finder#alphabetized'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
